@@ -12,7 +12,7 @@ NAME = "xvistaprof"
 DESCRIPTION = "Astropy reader for XVISTA profile tables"
 AUTHOR = "Jonathan Sick"
 AUTHOR_EMAIL = "jonathansick@mac.com"
-URL = "http://jonathansick.ca"
+URL = "https://github.com/jonathansick/xvistaprof/"
 VERSION = __import__(PACKAGE).__version__
 
 
@@ -31,8 +31,9 @@ setup(
     url=URL,
     packages=find_packages(exclude=["tests.*", "tests"]),
     classifiers=[
-            "Development Status :: 3 - Alpha",
+            "Development Status :: 5 - Production/Stable",
             "Intended Audience :: Developers",
+            "Intended Audience :: Science/Research",
             "License :: OSI Approved :: BSD License",
             "Operating System :: OS Independent",
             "Programming Language :: Python",
