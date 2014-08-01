@@ -11,11 +11,12 @@ from astropy.io import registry
 
 def xvista_table_reader(filename):
     dt = [('R', np.float), ('SB', np.float), ('SB_err', np.float),
-            ('ELL', np.float), ('PA', np.float), ('EMAG', np.float),
-            ('ELLMAG', np.float), ('ELLMAG_err', np.float), ('XC', np.float),
-            ('YC', np.float), ('FRACONT', np.float), ('A1', np.float),
-            ('A2', np.float), ('A4', np.float), ('CIRCMAG', np.float)]
-    data = np.loadtxt(filename, dtype=np.dtype(dt), skiprows=15)
+          ('ELL', np.float), ('PA', np.float), ('EMAG', np.float),
+          ('ELLMAG', np.float), ('ELLMAG_err', np.float), ('XC', np.float),
+          ('YC', np.float), ('FRACONT', np.float), ('A1', np.float),
+          ('A2', np.float), ('A4', np.float), ('CIRCMAG', np.float)]
+    data = np.genfromtxt(filename, dtype=np.dtype(dt), skiprows=15,
+                         missing_values='*', filling_values=np.nan)
     return Table(data)
 
 
